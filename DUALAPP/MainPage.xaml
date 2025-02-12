@@ -20,14 +20,19 @@
 
             <!-- Usuario -->
             <Label Text="Usuario : " TextColor="{StaticResource maincolor}" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" />
-            <Entry x:Name="usernameEntry" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese su usuario" />
+            <Entry x:Name="usernameEntry" TextColor="Black" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese su usuario" />
 
             <!-- Contraseña -->
             <Label Text="Contraseña : " TextColor="Black" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" />
-            <Entry x:Name="passwordEntry" Grid.Row="2" Grid.Column="1" Placeholder="Ingrese su contraseña" IsPassword="True" />
+            <Entry x:Name="passwordEntry" TextColor="Black" Grid.Row="2" Grid.Column="1" Placeholder="Ingrese su contraseña" IsPassword="True" />
 
             <!-- Botón de inicio de sesión -->
             <Button Text="Iniciar Sesión" Clicked="IniciarSesh" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+
+            <!-- Botón de agregar usuario -->
+            <Button Text="Agregar Usuario" Clicked="AgregarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
         </Grid>
 
         <!-- Footer con datos de la empresa -->

@@ -11,5 +11,9 @@
         {
             await Navigation.PushAsync(new postlogin());
         }
+        async public void AgregarUsuario(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewPage1());
+        }
     }
 }
