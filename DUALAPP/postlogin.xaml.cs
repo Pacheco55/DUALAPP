@@ -61,6 +61,10 @@ namespace DUALAPP
         {
             await Navigation.PushAsync(new MainPage());
         }
+        async private void GoToSettings(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Ajustes());
+        }
     }
 
     public class Device : INotifyPropertyChanged
@@ -94,6 +98,7 @@ namespace DUALAPP
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
       
 }

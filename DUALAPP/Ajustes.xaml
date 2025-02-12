@@ -1,0 +1,59 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DUALAPP.Ajustes"
+             Title="Ajustes">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,Auto,*" Padding="15" BackgroundColor="LightSteelBlue">
+        <!-- Sonido -->
+        <Label TextColor="Black" Text="Sonido" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Center">
+            <Slider x:Name="volumeSlider" Minimum="0" Maximum="100" WidthRequest="200" />
+            <Switch x:Name="soundSwitch" IsToggled="True" VerticalOptions="Center" />
+        </StackLayout>
+
+        <!-- Temas -->
+        <Label TextColor="Black" Text="Temas" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" />
+        <Picker x:Name="themePicker" Grid.Row="3" Grid.Column="0" VerticalOptions="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Claro</x:String>
+                    <x:String>Oscuro</x:String>
+                    <x:String>UPT</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Idioma -->
+        <Label TextColor="Black" Text="Idioma" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" />
+        <Picker x:Name="languagePicker" Grid.Row="5" Grid.Column="0" VerticalOptions="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Español</x:String>
+                    <x:String>Inglés</x:String>
+                    <x:String>Náhuatl</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Créditos -->
+        <Label TextColor="Black" Text="Créditos" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" />
+        <StackLayout Grid.Row="7" Grid.Column="0" VerticalOptions="Center">
+            <Label TextColor="Black" Text="Universidad Politecnica de Tecamac,Centro De Ingenieria Avanzada istema de educacion DUAL 5525 IS , 1er Proyecto , Febrero/2025 , PACHECO 5 " />
+        </StackLayout>
+
+        <!-- Botón de guardar configuración -->
+        <Button Text="Guardar Configuración" Clicked="OnSaveSettings" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="1" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+
+        <!-- Botón de regresar -->
+        <Button Text="Regresar" Clicked="OnBackToPostLogin" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="1" HorizontalOptions="Center" BackgroundColor="DarkSeaGreen" VerticalOptions="Center" />
+
+
+        <StackLayout Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
+
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
+        </StackLayout>
+        
+    </Grid>
+    
+</ContentPage>

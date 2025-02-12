@@ -27,8 +27,11 @@
             <!-- Botón para agregar dispositivo -->
             <Button TextColor="Black" Text="Agregar Sensor" WidthRequest="170" BackgroundColor="DarkSeaGreen" Clicked="OnAddDevice" Grid.Row="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
             <Button Text="REGRESAR" Clicked="Backlogin" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <!-- Botón redondo para ir a Ajustes -->
+            <Button Text="⚙️" Clicked="GoToSettings" BackgroundColor="DarkSeaGreen" TextColor="Black" Grid.Row="2" Grid.Column="2" CornerRadius="30" WidthRequest="60" HeightRequest="60" HorizontalOptions="End" VerticalOptions="End" Margin="20" />
 
         </Grid>
+       
 
         <!-- Footer con datos de la empresa -->
         <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
@@ -37,5 +40,8 @@
             <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
             <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
         </StackLayout>
+        
+        
     </Grid>
+    
 </ContentPage>
