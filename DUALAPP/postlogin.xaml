@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DUALAPP.postlogin"
+             Title="postlogin">
+    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="GhostWhite">
+        <!-- Logos en las esquinas -->
+        <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="150" WidthRequest="150" />
+        <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="150" WidthRequest="150"/>
+
+        <!-- Contenido principal -->
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+            <!-- Imagen de usuario -->
+            <Image Source="refriesp32pbs.png" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />
+            <!--<Image Source="refrisense.png" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />-->
+            <Button Text="REGRESAR" Clicked="Backlogin" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+
+        <!-- Footer con datos de la empresa -->
+        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
