@@ -17,12 +17,12 @@ namespace DUALAPP
             if (password == confirmPassword)
             {
                 // Guardar el usuario (puedes agregar la lógica para guardar en una base de datos o lista)
-                await DisplayAlert("Éxito", "Usuario agregado correctamente", "OK");
+                await DisplayAlert("YEAH", "Usuario agregado correctamente", "ACEPTAR");
                 await Navigation.PopAsync();
             }
             else
             {
-                await DisplayAlert("Error", "Las contraseñas no coinciden", "OK");
+                await DisplayAlert("ERROR !", "Las contraseñas no coinciden", "REGRESAR");
             }
         }
     }

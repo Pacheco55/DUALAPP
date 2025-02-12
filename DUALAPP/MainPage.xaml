@@ -6,15 +6,15 @@
         <Color x:Key="maincolor">black</Color>
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="GhostWhite">
+    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
         <!-- Logos en las esquinas -->
         <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="150" WidthRequest="150" />
+        <Image Source="refriesp32pbs.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />
         <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="150" WidthRequest="150"/>
 
         <!-- Contenido principal -->
         <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
             <!-- Imagen de usuario -->
-            <Image Source="refriesp32pbs.png" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />
             <!--<Image Source="refrisense.png" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />-->
 
 
@@ -27,10 +27,10 @@
             <Entry x:Name="passwordEntry" TextColor="Black" Grid.Row="2" Grid.Column="1" Placeholder="Ingrese su contraseña" IsPassword="True" />
 
             <!-- Botón de inicio de sesión -->
-            <Button Text="Iniciar Sesión" Clicked="IniciarSesh" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Iniciar Sesión" Clicked="IniciarSesh" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.Column="0"  HorizontalOptions="Center" VerticalOptions="Center" />
 
             <!-- Botón de agregar usuario -->
-            <Button Text="Agregar Usuario" Clicked="AgregarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Agregar Usuario" Clicked="AgregarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
 
 
         </Grid>

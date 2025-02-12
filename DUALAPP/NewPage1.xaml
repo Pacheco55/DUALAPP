@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DUALAPP.NewPage1"
              Title="Agregar Usuario">
-    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="GhostWhite">
+    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
         <!-- Contenido principal -->
         <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
             <!-- Nombre de usuario -->
@@ -18,7 +18,12 @@
             <Entry x:Name="confirmPasswordEntry" TextColor="Black" Grid.Row="2" Grid.Column="1" Placeholder="Confirme la contraseña" IsPassword="True" />
 
             <!-- Botón de guardar usuario -->
-            <Button Text="Guardar Usuario" Clicked="GuardarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Guardar Usuario" Clicked="GuardarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
         </Grid>
+        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" />
+        </StackLayout>
     </Grid>
 </ContentPage>
