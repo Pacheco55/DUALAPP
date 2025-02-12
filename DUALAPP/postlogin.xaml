@@ -14,27 +14,28 @@
             <CollectionView x:Name="DevicesCollectionView" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Devices}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Horizontal" Padding="10">
+                        <StackLayout Orientation="Vertical" Padding="10">
                             <Label TextColor="Black" Text="{Binding Name}" VerticalOptions="Center" />
-                            <Entry Text="{Binding Temperature}" Placeholder="Temperatura" WidthRequest="100" />
-                            <Entry Text="{Binding Humidity}" Placeholder="Humedad" WidthRequest="100" />
-                            <Button Text="Eliminar" Clicked="OnDeleteDevice" />
+                            <Entry TextColor="red" Text="{Binding Temperature}" Placeholder="Temperatura" WidthRequest="100" />
+                            <Entry TextColor="Blue" Text="{Binding Humidity}" Placeholder="Humedad" WidthRequest="100" />
+                            <Button TextColor="Black" Text="Eliminar" Clicked="OnDeleteDevice" WidthRequest="100" />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
             <!-- Botón para agregar dispositivo -->
-            <Button TextColor="Black" Text="Agregar Dispositivo" Clicked="OnAddDevice" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
-            <Button Text="REGRESAR" Clicked="Backlogin" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button TextColor="Black" Text="Agregar Sensor" WidthRequest="170" BackgroundColor="DarkSeaGreen" Clicked="OnAddDevice" Grid.Row="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="REGRESAR" Clicked="Backlogin" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
 
         </Grid>
 
         <!-- Footer con datos de la empresa -->
         <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
-            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" />
-            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" />
-            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" />
+
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
         </StackLayout>
     </Grid>
 </ContentPage>

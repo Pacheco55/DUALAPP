@@ -8,14 +8,13 @@
 
     <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
         <!-- Logos en las esquinas -->
-        <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="150" WidthRequest="150" />
-        <Image Source="refriesp32pbs.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />
-        <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="150" WidthRequest="150"/>
+        <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" />
+        <Image Source="refriesp32pbs.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="100" WidthRequest="100"/>
 
         <!-- Contenido principal -->
         <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
             <!-- Imagen de usuario -->
-            <!--<Image Source="refrisense.png" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />-->
 
 
             <!-- Usuario -->
@@ -27,19 +26,22 @@
             <Entry x:Name="passwordEntry" TextColor="Black" Grid.Row="2" Grid.Column="1" Placeholder="Ingrese su contraseña" IsPassword="True" />
 
             <!-- Botón de inicio de sesión -->
-            <Button Text="Iniciar Sesión" Clicked="IniciarSesh" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.Column="0"  HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Iniciar Sesión" Clicked="IniciarSesh" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
 
             <!-- Botón de agregar usuario -->
-            <Button Text="Agregar Usuario" Clicked="AgregarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Agregar Usuario" HeightRequest="40" Clicked="AgregarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" />
+            <!--<Image Source="refrisense.png" Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />-->
+
 
 
         </Grid>
 
         <!-- Footer con datos de la empresa -->
         <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
-            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" />
-            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" />
-            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" />
+            
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
         </StackLayout>
     </Grid>
 </ContentPage>

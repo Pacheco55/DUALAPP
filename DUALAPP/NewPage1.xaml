@@ -4,26 +4,29 @@
              Title="Agregar Usuario">
     <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
         <!-- Contenido principal -->
-        <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="25" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
             <!-- Nombre de usuario -->
-            <Label Text="Nombre de Usuario : " TextColor="Black" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
-            <Entry x:Name="newUsernameEntry" TextColor="Black" Grid.Row="0" Grid.Column="1" Placeholder="Ingrese el nombre de usuario" />
+            <Label Text="Nombre de Usuario : " FontSize="12" TextColor="Black" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="newUsernameEntry" TextColor="Black" Grid.Row="0" Grid.Column="1" Placeholder="Ingrese el nombre de usuario" PlaceholderColor="DarkSeaGreen" />
 
             <!-- Contraseña -->
-            <Label Text="Contraseña : " TextColor="Black" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" />
-            <Entry x:Name="newPasswordEntry" TextColor="Black" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese la contraseña" IsPassword="True" />
+            <Label Text="Contraseña : " FontSize="12" TextColor="Black" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="newPasswordEntry" TextColor="Black" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese la contraseña" PlaceholderColor="DarkSeaGreen" IsPassword="True" />
 
             <!-- Confirmar Contraseña -->
-            <Label Text="Confirmar Contraseña : " TextColor="Black" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" />
-            <Entry x:Name="confirmPasswordEntry" TextColor="Black" Grid.Row="2" Grid.Column="1" Placeholder="Confirme la contraseña" IsPassword="True" />
+            <Label Text="Confirmar Contraseña : " FontSize="12" TextColor="Black" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="confirmPasswordEntry" TextColor="Black" Grid.Row="2" Grid.Column="1" Placeholder="Confirme la contraseña" PlaceholderColor="DarkSeaGreen" IsPassword="True" />
 
             <!-- Botón de guardar usuario -->
-            <Button Text="Guardar Usuario" Clicked="GuardarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="Guardar Usuario" Clicked="GuardarUsuario" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Image Source="refriesp32pbs.png" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" />
+
         </Grid>
         <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
-            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" />
-            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" />
-            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" />
+
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
         </StackLayout>
     </Grid>
 </ContentPage>
