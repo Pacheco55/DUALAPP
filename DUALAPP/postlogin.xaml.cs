@@ -65,6 +65,10 @@ namespace DUALAPP
         {
             await Navigation.PushAsync(new Ajustes());
         }
+        async private void Grafx(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Graficas());
+        }
     }
 
     public class Device : INotifyPropertyChanged

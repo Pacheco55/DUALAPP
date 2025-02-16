@@ -27,6 +27,7 @@
             <!-- Botón para agregar dispositivo -->
             <Button TextColor="Black" Text="Agregar Sensor" WidthRequest="170" BackgroundColor="DarkSeaGreen" Clicked="OnAddDevice" Grid.Row="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
             <Button Text="REGRESAR" Clicked="Backlogin" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Button Text="GraFX" Clicked="Grafx" TextColor="Black" BackgroundColor="DarkSeaGreen" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" />
             <!-- Botón redondo para ir a Ajustes -->
             <Button Text="⚙️" Clicked="GoToSettings" BackgroundColor="DarkSeaGreen" TextColor="Black" Grid.Row="2" Grid.Column="2" CornerRadius="30" WidthRequest="60" HeightRequest="60" HorizontalOptions="End" VerticalOptions="End" Margin="20" />
 
