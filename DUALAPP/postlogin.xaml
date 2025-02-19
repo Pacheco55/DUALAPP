@@ -10,14 +10,18 @@
         <!-- Contenido principal -->
         <Grid BackgroundColor="LightSteelBlue" Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,*,Auto" ColumnDefinitions="Auto,*">
             <!-- Lista de dispositivos -->
-            <Label Text="Dispositivos" TextColor="Black" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" />
+            <Label Text="Sensores" TextColor="Black" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" />
             <CollectionView x:Name="DevicesCollectionView" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Devices}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Vertical" Padding="10">
                             <Label TextColor="Black" Text="{Binding Name}" VerticalOptions="Center" />
-                            <Entry TextColor="red" Text="{Binding Temperature}" Placeholder="Temperatura" WidthRequest="100" />
+                            <Entry TextColor="Black" Text="{Binding Ubi}" />
+                            <Label Text="Temperatura : " TextColor="Black" VerticalOptions="Center" />
+                            <Entry TextColor="red" Text="{Binding Temperature}" Placeholder="Temperatura" WidthRequest="100"  />
+                            <Label Text=" : " TextColor="Black" VerticalOptions="Center" />
                             <Entry TextColor="Blue" Text="{Binding Humidity}" Placeholder="Humedad" WidthRequest="100" />
+                            
                             <Button TextColor="Black" Text="Eliminar" Clicked="OnDeleteDevice" WidthRequest="100" />
                         </StackLayout>
                     </DataTemplate>

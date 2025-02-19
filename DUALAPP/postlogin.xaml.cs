@@ -47,7 +47,8 @@ namespace DUALAPP
         private void OnAddDevice(object sender, EventArgs e)
         {
             // Lógica para agregar un nuevo dispositivo
-            Devices.Add(new Device { Name = "Nuevo Sensor" });
+            Devices.Add(new Device { Name = "Sensor : " + "\nUbicacion :" + "\nID :" + "\nStatus :"});
+            
         }
 
         private void OnDeleteDevice(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace DUALAPP
         }
         private async void Backlogin(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new Dispositivos());
         }
         async private void GoToSettings(object sender, EventArgs e)
         {

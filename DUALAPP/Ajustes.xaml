@@ -6,8 +6,8 @@
         <!-- Sonido -->
         <Label TextColor="Black" Text="Sonido" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
         <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Center">
-            <Slider x:Name="volumeSlider" Minimum="0" Maximum="100" WidthRequest="200" />
-            <Switch x:Name="soundSwitch" IsToggled="True" VerticalOptions="Center" />
+            <Slider ValueChanged="OnVolumeChanged" x:Name="volumeSlider" Minimum="0" Maximum="100" WidthRequest="200" />
+            <Switch Toggled="OnSoundToggled" IsToggled="False" x:Name="soundSwitch" VerticalOptions="Center" />
         </StackLayout>
 
         <!-- Temas -->
