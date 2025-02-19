@@ -54,6 +54,22 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\AppIcon\%24placeholder%24.scale-100.png" />
+	  <None Remove="Resources\AppIcon\%24placeholder%24.scale-125.png" />
+	  <None Remove="Resources\AppIcon\%24placeholder%24.scale-150.png" />
+	  <None Remove="Resources\AppIcon\%24placeholder%24.scale-200.png" />
+	  <None Remove="Resources\AppIcon\%24placeholder%24.scale-400.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\AppIcon\$placeholder$.scale-100.png" />
+	  <Content Include="Resources\AppIcon\$placeholder$.scale-125.png" />
+	  <Content Include="Resources\AppIcon\$placeholder$.scale-150.png" />
+	  <Content Include="Resources\AppIcon\$placeholder$.scale-200.png" />
+	  <Content Include="Resources\AppIcon\$placeholder$.scale-400.png" />
+	</ItemGroup>
 	<ItemGroup>
 		<MauiImage Include="Resources\Images\isrelieve.png" />
 		<MauiImage Include="Resources\Images\uptrelieve.png" />
@@ -73,7 +89,13 @@
 	  <MauiXaml Update="Ajustes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Dispositivos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Graficas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="lobby.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewPage1.xaml">

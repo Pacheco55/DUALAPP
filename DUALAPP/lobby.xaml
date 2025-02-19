@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DUALAPP.lobby"
+             Title="lobby">
+    <ContentPage.Resources>
+        <Color x:Key="maincolor">black</Color>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
+        <!-- Logos en las esquinas -->
+        <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" />
+        <Image Source="refriesp32pbs.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="100" WidthRequest="100"/>
+
+        <!-- Contenido principal -->
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+            <!-- Frame para datos del cliente -->
+            <Frame Grid.Row="1" Grid.ColumnSpan="2" Padding="10" BackgroundColor="White" CornerRadius="10">
+                <StackLayout>
+                    <!-- Nombre del cliente -->
+                    <Label Text="Nombre del cliente:" TextColor="{StaticResource maincolor}" VerticalOptions="Center" />
+                    <Entry x:Name="clientNameEntry" TextColor="Black" Placeholder="Ingrese el nombre del cliente" />
+
+                    <!-- Ubicación -->
+                    <Label Text="Ubicación:" TextColor="Black" VerticalOptions="Center" />
+                    <Entry x:Name="locationEntry" TextColor="Black" Placeholder="Ingrese la ubicación" />
+
+                    <!-- Campo adicional 1 -->
+                    <Label Text="Campo adicional 1:" TextColor="Black" VerticalOptions="Center" />
+                    <Entry x:Name="additionalField1Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+
+                    <!-- Campo adicional 2 -->
+                    <Label Text="Campo adicional 2:" TextColor="Black" VerticalOptions="Center" />
+                    <Entry x:Name="additionalField2Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+
+                    <!-- Campo adicional 3 -->
+                    <Label Text="Campo adicional 3:" TextColor="Black" VerticalOptions="Center" />
+                    <Entry x:Name="additionalField3Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Frame para los botones -->
+            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="10" BackgroundColor="White" CornerRadius="10">
+                <StackLayout>
+                    <!-- Botón de cerrar sesión -->
+                    <Button Text="Cerrar Sesión" Clicked="OnCerrarSesionClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <!-- Botón de ajustes -->
+                    <Button Text="Ajustes" Clicked="OnAjustesClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <!-- Botón de dispositivos -->
+                    <Button Text="Dispositivos" Clicked="OnDispositivosClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+
+        <!-- Footer con datos de la empresa -->
+        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
+            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
+            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
+

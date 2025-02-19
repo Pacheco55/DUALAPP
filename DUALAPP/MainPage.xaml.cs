@@ -9,7 +9,7 @@
 
         async public void IniciarSesh(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new postlogin());
+            await Navigation.PushAsync(new lobby());
         }
         async public void AgregarUsuario(object sender, EventArgs e)
         {
