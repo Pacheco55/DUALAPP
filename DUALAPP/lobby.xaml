@@ -6,61 +6,80 @@
     <ContentPage.Resources>
         <Color x:Key="maincolor">black</Color>
     </ContentPage.Resources>
+    <ScrollView>
 
-    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
-        <!-- Logos en las esquinas -->
-        <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" />
-        <Image Source="refriesp32pbs.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" />
-        <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="100" WidthRequest="100"/>
+        <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
+            <!-- Logos en las esquinas -->
+            <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" />
+            <Image Source="refriesp32pbs.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Image Source="uptrelieve.png" Grid.Row="0" Grid.Column="2" HeightRequest="100" WidthRequest="100"/>
 
-        <!-- Contenido principal -->
-        <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
-            <!-- Frame para datos del cliente -->
-            <Frame Grid.Row="1" Grid.ColumnSpan="2" Padding="10" BackgroundColor="White" CornerRadius="10">
-                <StackLayout>
-                    <!-- Nombre del cliente -->
-                    <Label Text="Nombre del cliente:" TextColor="{StaticResource maincolor}" VerticalOptions="Center" />
-                    <Entry x:Name="clientNameEntry" TextColor="Black" Placeholder="Ingrese el nombre del cliente" />
+            <!-- Contenido principal -->
+            <Grid Grid.Row="1" Grid.ColumnSpan="3" Padding="100" RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*">
+                <!-- Frame para datos del cliente -->
+                <Frame Grid.Row="1" Grid.ColumnSpan="2" Padding="10" BackgroundColor="White" CornerRadius="10">
+                    <StackLayout>
+                        <!-- Nombre del cliente -->
+                        <Label Text="Nombre del cliente:" TextColor="{StaticResource maincolor}" VerticalOptions="Center" />
+                        <Entry x:Name="clientNameEntry" TextColor="Black" Placeholder="Ingrese el nombre del cliente" />
 
-                    <!-- Ubicación -->
-                    <Label Text="Ubicación:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="locationEntry" TextColor="Black" Placeholder="Ingrese la ubicación" />
+                        <!-- Nombre del dispositivo -->
+                        <Label Text="Nombre del dispositivo:" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="deviceNameEntry" TextColor="Black" Placeholder="Sensor temperatura y humedad ." />
 
-                    <!-- Campo adicional 1 -->
-                    <Label Text="Campo adicional 1:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="additionalField1Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+                        <!-- Número de serie del dispositivo -->
+                        <Label Text="Número de serie del dispositivo:" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="serialNumberEntry" TextColor="Black" Placeholder="1323144310" />
 
-                    <!-- Campo adicional 2 -->
-                    <Label Text="Campo adicional 2:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="additionalField2Entry" TextColor="Black" Placeholder="Ingrese el valor" />
 
-                    <!-- Campo adicional 3 -->
-                    <Label Text="Campo adicional 3:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="additionalField3Entry" TextColor="Black" Placeholder="Ingrese el valor" />
-                </StackLayout>
-            </Frame>
+                        <!-- Ubicación -->
+                        <Label Text="Estado:" TextColor="Black" VerticalOptions="Center" />
+                        <Picker x:Name="estadoPicker" TextColor="Black" SelectedIndexChanged="OnEstadoSelected" />
 
-            <!-- Frame para los botones -->
-            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="10" BackgroundColor="White" CornerRadius="10">
-                <StackLayout>
-                    <!-- Botón de cerrar sesión -->
-                    <Button Text="Cerrar Sesión" Clicked="OnCerrarSesionClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label Text="Municipio:" TextColor="Black" VerticalOptions="Center" />
+                        <Picker x:Name="municipioPicker" TextColor="Black" SelectedIndexChanged="OnMunicipioSelected" />
 
-                    <!-- Botón de ajustes -->
-                    <Button Text="Ajustes" Clicked="OnAjustesClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label Text="Código Postal:" TextColor="Black" VerticalOptions="Center" />
+                        <Picker x:Name="codigoPostalPicker" TextColor="Black" SelectedIndexChanged="OnCodigoPostalSelected" />
 
-                    <!-- Botón de dispositivos -->
-                    <Button Text="Dispositivos" Clicked="OnDispositivosClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
-                </StackLayout>
-            </Frame>
+                        <Label Text="Colonia:" TextColor="Black" VerticalOptions="Center" />
+                        <Picker x:Name="coloniaPicker" TextColor="Black" />
+
+                        <!-- Campo adicional 1 -->
+                        <Label Text="Correo Electronico:" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="additionalField1Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+
+                        <!-- Campo adicional 2 -->
+                        <Label Text="Campo adicional 2:" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="additionalField2Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+
+                        <!-- Campo adicional 3 -->
+                        <Label Text="Campo adicional 3:" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="additionalField3Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Frame para los botones -->
+                <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="10"  BackgroundColor="LightSlateGrey" CornerRadius="10">
+                    <StackLayout Spacing="10">
+                        <!-- Botón de cerrar sesión -->
+                        <Button Text="Cerrar Sesión" Clicked="Regresar" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                        <!-- Botón de ajustes -->
+                        <Button Text="Ajustes" Clicked="OnAjustesClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                        <!-- Botón de dispositivos -->
+                        <Button Text="Dispositivos" Clicked="OnDispositivosClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <!-- Footer con datos de la empresa -->
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
+                <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+                <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
+                <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
+            </StackLayout>
         </Grid>
-
-        <!-- Footer con datos de la empresa -->
-        <StackLayout Grid.Row="2" Grid.ColumnSpan="3" Padding="10" BackgroundColor="LightGray">
-            <Label Text="REFRISENS" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
-            <Label Text="Laboratorios DUAL Ingenieria en Software UPT 2025" HorizontalOptions="Center" FontSize="10" />
-            <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
-        </StackLayout>
-    </Grid>
+    </ScrollView>
 </ContentPage>
-

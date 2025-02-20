@@ -7,6 +7,8 @@
         <Color x:Key="textcolor">black</Color>
     </ContentPage.Resources>
 
+    <ScrollView>
+
     <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*,Auto,*" BackgroundColor="LightSteelBlue">
         <!-- Logos en las esquinas -->
         <Image Source="isrelieve.png" Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" />
@@ -20,25 +22,25 @@
                 <StackLayout>
                     <!-- Nombre del dispositivo -->
                     <Label Text="Nombre del dispositivo:" TextColor="{StaticResource textcolor}" VerticalOptions="Center" />
-                    <Entry x:Name="deviceNameEntry" TextColor="Black" Placeholder="Ingrese el nombre del dispositivo" />
+                    <Entry x:Name="deviceNameEntry" TextColor="Black" Placeholder="Sensor temperatura y humedad ." />
 
                     <!-- Número de serie del dispositivo -->
                     <Label Text="Número de serie del dispositivo:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="serialNumberEntry" TextColor="Black" Placeholder="Ingrese el número de serie" />
+                    <Entry x:Name="serialNumberEntry" TextColor="Black" Placeholder="1323144310" />
 
                     <!-- Espacio en blanco 1 -->
-                    <Label Text="Espacio en blanco 1:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="blankSpace1Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+                    <Label Text="Ubicacion  :" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="blankSpace1Entry" TextColor="Black" Placeholder="Av. 5 de Mayo Manzana 018, Tecamac, 55740 Tecámac de Felipe Villanueva, Méx." />
 
                     <!-- Espacio en blanco 2 -->
-                    <Label Text="Espacio en blanco 2:" TextColor="Black" VerticalOptions="Center" />
-                    <Entry x:Name="blankSpace2Entry" TextColor="Black" Placeholder="Ingrese el valor" />
+                    <Label Text="Longitud y Latitud :" TextColor="Black" VerticalOptions="Center" />
+                        <Entry x:Name="blankSpace2Entry" TextColor="Black" Placeholder="19.71413665937681, -98.97817089137764" />
                 </StackLayout>
             </Frame>
 
             <!-- Frame para los botones -->
-            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="10" BackgroundColor="White" CornerRadius="10">
-                <StackLayout>
+            <Frame Grid.Row="2" Grid.ColumnSpan="2" Padding="10" BackgroundColor="SlateGray" CornerRadius="10">
+                <StackLayout Spacing="10">
                     <!-- Botón de confirmar -->
                     <Button Text="Confirmar" Clicked="OnConfirmarClicked" HeightRequest="40" TextColor="Black" BackgroundColor="DarkSeaGreen" HorizontalOptions="Center" VerticalOptions="Center" />
 
@@ -55,4 +57,5 @@
             <Label Text="Teléfono: 55-59-30-02-86" HorizontalOptions="Center" FontSize="12" />
         </StackLayout>
     </Grid>
+    </ScrollView>
 </ContentPage>

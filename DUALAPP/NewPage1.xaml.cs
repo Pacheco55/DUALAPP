@@ -11,9 +11,10 @@ namespace DUALAPP
         {
             // Lógica para guardar el nuevo usuario
             string username = newUsernameEntry.Text;
+            string email = newUserEmail.Text;
             string password = newPasswordEntry.Text;
             string confirmPassword = confirmPasswordEntry.Text;
-
+            
             if (password == confirmPassword)
             {
                 // Guardar el usuario (puedes agregar la lógica para guardar en una base de datos o lista)
@@ -24,6 +25,10 @@ namespace DUALAPP
             {
                 await DisplayAlert("ERROR !", "Las contraseñas no coinciden", "REGRESAR");
             }
+        }
+        async public void Regresar(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
